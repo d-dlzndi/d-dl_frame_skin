@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="utf-8"?>
+<skin>
+  <information>
+    <name>d-dl frame skin</name>
+    <!-- 스킨의 이름 -->
+    <version>0.1</version>
+    <!-- 스킨의 버전 -->
+    <description>
+      <!-- 스킨의 상세 설명 -->
+      <![CDATA[큰 두께의 이미지 프레임이 특징인 단순한 스킨.]]>
+    </description>
+    <license>
+      <!-- 스킨의 라이센스 -->
+      <![CDATA[copyright를 제외하고 자유로운 수정이 가능합니다. 단, 재배포는 불가합니다. 질문은 스킨 배포 페이지를 통해 해주세요.]]>
+    </license>
+  </information>
+  <author>
+    <name>ㅓㅇ</name>
+    <!-- 스킨 제작자 이름 -->
+    <homepage>https://d-dl.tistory.com</homepage>
+    <!-- 스킨 제작자 홈페이지 -->
+    <email>d.dlzndi@gmail.com</email>
+    <!-- 스킨 제작자 이메일 주소 -->
+  </author>
+  <default>
+    <recentEntries>5</recentEntries>
+    <!-- 사이드바의 최근글 표시 갯수 -->
+    <recentComments>5</recentComments>
+    <!-- 사이드바의 최근 댓글 표시 갯수 -->
+    <recentTrackbacks>5</recentTrackbacks>
+    <!-- 사이드바의 최근 트랙백 표시 갯수 -->
+    <itemsOnGuestbook>10</itemsOnGuestbook>
+    <!-- 한페이지에 표시될 방명록 갯수 -->
+    <tagsInCloud>30</tagsInCloud>
+    <!-- 사이드바에 표시될 태그 갯수 -->
+    <sortInCloud>3</sortInCloud>
+    <!-- 태그 클라우드 표현 방식 (1:인기도순, 2:이름순, 3:랜덤) -->
+    <expandComment>0</expandComment>
+    <!-- 댓글영역 표현 방식 (0:감추기, 1:펼치기) -->
+    <expandTrackback>0</expandTrackback>
+    <!-- 트랙백영역 표현 방식 (0:감추기, 1:펼치기) -->
+    <lengthOfRecentNotice>25</lengthOfRecentNotice>
+    <!-- 최근 공지 표현될 글자수 -->
+    <lengthOfRecentEntry>27</lengthOfRecentEntry>
+    <!-- 최근 글 표현될 글자수 -->
+    <lengthOfRecentComment>30</lengthOfRecentComment>
+    <!-- 최근 댓글에 표현될 글자수 -->
+    <lengthOfRecentTrackback>30</lengthOfRecentTrackback>
+    <!-- 최근 트랙백에 표현될 글자수 -->
+    <lengthOfLink>30</lengthOfLink>
+    <!-- 링크에 표현될 글자수 -->
+    <showListOnCategory>1</showListOnCategory>
+    <!-- 카테고리 클릭시 리스트 표현(0:숨김, 1:보임) -->
+    <showListOnArchive>1</showListOnArchive>
+    <!-- 글보관함 클릭시 리스트 표현(0:숨김, 1:보임) -->
+    <commentMessage>
+      <none>댓글이 없습니다.</none>
+      <!-- 댓글이 하나도 없을때 -->
+      <single>댓글 &lt;span class="cnt"&gt;하나&lt;/span&gt; 달렸습니다.</single>
+      <!-- 댓글이 하나 있을때 -->
+    </commentMessage>
+    <trackbackMessage>
+      <none>받은 트랙백이 없고</none>
+      <!-- 트랙백 표현 방법 -->
+      <single>트랙백이 &lt;span class="cnt"&gt;하나&lt;/span&gt;이고</single>
+      <!-- 트랙백이 하나도 없을때 -->
+    </trackbackMessage>
+    <tree>
+      <color>000000</color>
+      <!-- 댓글이 하나 있을때 -->
+      <bgColor>ffffff</bgColor>
+      <!-- 카테고리 배경색 -->
+      <activeColor>000000</activeColor>
+      <!-- 선택시 글자색 -->
+      <activeBgColor>eeeeee</activeBgColor>
+      <!-- 선택시 배경색 -->
+      <labelLength>27</labelLength>
+      <!-- 표현될 카테고리 글자 수 -->
+      <showValue>1</showValue>
+      <!-- 카테고리 글 수 표현(0:숨김, 1:보임) -->
+    </tree>
+    <contentWidth>720</contentWidth>
+    <!-- 콘텐츠영역 가로 사이즈, 이 사이즈에 맞춰 에디터의 위지윅이 제대로 구현된다. -->
+    <cover>
+      <![CDATA[
+      [
+        {
+          "name": "cover-slider",
+          "title": "",
+          "dataType": "CUSTOM",
+          "data": [
+            {
+              "title":"슬라이더를 넣어봅시다.",
+              "summary":"",
+              "url":"",
+              "thumbnail":"https://t1.daumcdn.net/tistory_admin/assets/promotions/b724628d737840f99b400bfe73d0e97b"
+            },
+            {
+              "title":"링크도 삽입할 수 있어요.",
+              "summary":"",
+              "url":"",
+              "thumbnail":"https://t1.daumcdn.net/tistory_admin/assets/promotions/ef01117e7f7f410388326b5b08eff9ba"
+            },
+            {
+              "title":"내용은 두줄 이상이 보기 좋아요.",
+              "summary":"",
+              "url":"",
+              "thumbnail":"https://t1.daumcdn.net/tistory_admin/assets/promotions/9d53f0f63d0349719de9ff9bd7840c21"
+            }
+          ]
+        },
+        {
+          "name": "cover-thumbnail-list-1",
+          "title": "섬네일 리스트1 예시",
+          "dataType": "CUSTOM",
+          "data": [
+            {"title":"커버 수정을 통해","summary":"","url":"","thumbnail":"https://t1.daumcdn.net/tistory_admin/assets/promotions/345a67ea51e049f8b5c0c570ed739d70"},
+            {"title":"여러분의 게시물을","summary":"","url":"","thumbnail":"https://t1.daumcdn.net/tistory_admin/assets/promotions/86f5809fc8394b3cb3681bead23383f0"},
+            {"title":"최신순으로 노출할 수도 있습니다.","summary":"","url":"","thumbnail":"https://t1.daumcdn.net/tistory_admin/assets/promotions/c3737af74ccc4024854b602ba238e393"}
+          ]
+        },
+        {
+          "name": "cover-special-contents",
+          "title": "",
+          "dataType": "CUSTOM",
+          "data": [
+            {"title":"스페셜 콘텐츠 예시","summary":"카테고리별 최신글 노출, 특정 글 선택, 직접 입력 등 다양한 방식으로 여러분의 티스토리 첫화면을 꾸밀 수 있습니다.","url":"","thumbnail":"https://t1.daumcdn.net/tistory_admin/assets/promotions/42b1ab83809348dc82d8b4ff8e5b0cec"},
+            {"title":"스페셜 콘텐츠 예시","summary":"커버 아이템의 종류와 순서를 편집해보세요. \n하나의 스킨으로 다양한 홈 화면을 만들어낼 수 있습니다.\n","url":"","thumbnail":"https://t1.daumcdn.net/tistory_admin/assets/promotions/8ea4361c9a6b41ae81fe693fadf39d4e"}
+          ]
+        },
+        {
+          "name": "cover-wide-panel",
+          "title": "",
+          "dataType": "CUSTOM",
+          "data": [
+            {"title":"와이드패널 예시","summary":"스킨 옵션으로도 첫화면을 다르게 설정할 수 있습니다.<br>\nWhatever 스킨은 [로고 이미지, 목록 더보기, 레이아웃 타입, 컬러 타입, 리스트 타입] 다섯 가지 옵션을 제공합니다.","url":"","thumbnail":"https://t1.daumcdn.net/tistory_admin/assets/promotions/19bf0422698f4c938c69ae2814c94b4f"}
+          ]
+        },
+        {
+          "name": "cover-thumbnail-list-2",
+          "title": "게시물이 존재할 경우 아래에 최신순 4건이 배열됩니다",
+          "dataType": "RECENT",
+          "data": {"category":"ALL","size":"4"}
+        }
+      ]
+      ]]>
+    </cover>
+  </default>
+  <cover>
+    <item>
+      <name>cover-slider</name>
+      <label>
+        <![CDATA[ 슬라이더 ]]>
+      </label>
+      <description>
+        <![CDATA[ 이미지가 넘어가는 슬라이더입니다. ]]>
+      </description>
+    </item>
+    <item>
+      <name>cover-thumbnail-list-1</name>
+      <label>
+        <![CDATA[ 섬네일 리스트1 ]]>
+      </label>
+      <description>
+        <![CDATA[ 섬네일과 제목만으로 이뤄진 리스트입니다. (아이템 타이틀 입력 권장) ]]>
+      </description>
+    </item>
+    <item>
+      <name>cover-thumbnail-list-2</name>
+      <label>
+        <![CDATA[ 섬네일 리스트2 ]]>
+      </label>
+      <description>
+        <![CDATA[ 기본적인 리스트입니다.
+      섬네일, 제목과 본문 일부가 함께 노출됩니다. ]]>
+      </description>
+    </item>
+    <item>
+      <name>cover-special-contents</name>
+      <label>
+        <![CDATA[ 스페셜 콘텐츠]]>
+      </label>
+      <description>
+        <![CDATA[ 가로폭 전체를 사용하여 콘텐츠를 강조합니다.
+      홀수/짝수에 배치에 따라 이미지 위치가 좌/우로 변경됩니다. ]]>
+      </description>
+    </item>
+    <item>
+      <name>cover-wide-panel</name>
+      <label>
+        <![CDATA[ 와이드패널 ]]>
+      </label>
+      <description>
+        <![CDATA[ 대표 이미지를 배경으로 하고, 본문 앞 문구를 가로폭 전체에 담아 보여줍니다. ]]>
+      </description>
+    </item>
+  </cover>
+  <variables>
+    <!--추가-->
+    <variablegroup name="배경 설정">
+      <variable>
+        <name>con-width</name>
+        <label>
+          <![CDATA[ 기본 넓이 ]]>
+        </label>
+        <type>STRING</type>
+        <option/>
+        <default>800</default>
+        <description>
+          <![CDATA[ PC에서 본문의 넓이를 설정해주세요.(기본값 800, 단위 px) ]]>
+        </description>
+      </variable>
+      <variable>
+        <name>bg-img</name>
+        <label>
+          <![CDATA[ 배경 이미지(링크) ]]>
+        </label>
+        <type>STRING</type>
+        <option/>
+        <default>https://placeimg.com/1000/700/nature</default>
+        <description>
+          <![CDATA[ 배경 이미지를 설정합니다. 반드시 링크 형식이어야 합니다. ★http, https 포함★ ]]>
+        </description>
+      </variable>
+      <variable>
+        <name>side-f</name>
+        <label>
+          <![CDATA[ 사이드바 단 수 ]]>
+        </label>
+        <type>SELECT</type>
+        <option>
+          <![CDATA[[
+              {"name":"1","label":"1단","value":"1"},
+              {"name":"2","label":"2단","value":"2"}
+              ]]]>
+        </option>
+        <default>1</default>
+        <description>
+          <![CDATA[ 사이드바의 단 수를 설정합니다. ]]>
+        </description>
+      </variable>
+      <variable>
+        <name>sideshut</name>
+        <label>
+          <![CDATA[ 사이드바 닫아두기 ]]>
+        </label>
+        <type>BOOL</type>
+        <option/>
+        <default>true</default>
+        <description>
+          <![CDATA[ ON-사이드바를 접습니다 / OFF-펴둡니다 ]]>
+        </description>
+      </variable>
+    </variablegroup>
+    <variablegroup name="배경 애니메이션 설정">
+      <variable>
+        <name>bg-trans</name>
+        <label>
+          <![CDATA[ 시간지나면 배경투명화 ]]>
+        </label>
+        <type>BOOL</type>
+        <option/>
+        <default>true</default>
+        <description>
+          <![CDATA[ ON-배경까지 투명화합니다 / OFF-배경을 투명화하지 않습니다 ]]>
+        </description>
+      </variable>
+      <variable>
+        <name>bg-enter</name>
+        <label>
+          <![CDATA[ 밝아지는 속도 ]]>
+        </label>
+        <type>STRING</type>
+        <option/>
+        <default>300</default>
+        <description>
+          <![CDATA[ 화면 외부에서 내부로 마우스가 들어올 때 화면이 밝아지는 속도를 설정합니다.
+          0에 가까울수록 빠른 속도입니다. ]]>
+        </description>
+      </variable>
+      <variable>
+        <name>bg-leave</name>
+        <label>
+          <![CDATA[ 어두워지는 속도 ]]>
+        </label>
+        <type>STRING</type>
+        <option/>
+        <default>5000</default>
+        <description>
+          <![CDATA[ 화면 내부에서 외부로 마우스가 나갈 때 화면이 어두워지는 속도를 설정합니다.
+          숫자가 커질수록 느린 속도입니다. ]]>
+        </description>
+      </variable>
+    </variablegroup>
+    <variablegroup name="색상 설정">
+      <variable>
+        <name>bg-color</name>
+        <label>
+          <![CDATA[ 배경색 ]]>
+        </label>
+        <type>COLOR</type>
+        <option/>
+        <default>#FFF</default>
+        <description>
+          <![CDATA[ 사진이 아닌 부분의 배경색을 설정합니다. ]]>
+        </description>
+      </variable>
+      <variable>
+        <name>main-color</name>
+        <label>
+          <![CDATA[ 글자색 ]]>
+        </label>
+        <type>COLOR</type>
+        <option/>
+        <default>#444</default>
+        <description>
+          <![CDATA[ 글자색을 설정합니다. 배경색 위에서 뚜렷하게 보일수록 좋습니다. ]]>
+        </description>
+      </variable>
+      <variable>
+        <name>sub-color</name>
+        <label>
+          <![CDATA[ 글자보조색 ]]>
+        </label>
+        <type>COLOR</type>
+        <option/>
+        <default>#eee</default>
+        <description>
+          <![CDATA[ 글자보조색을 설정합니다. 글자색과 비슷하되 배경색에 가까울수록 좋습니다. ]]>
+        </description>
+      </variable>
+      <variable>
+        <name>pt-color</name>
+        <label>
+          <![CDATA[ 강조색 ]]>
+        </label>
+        <type>COLOR</type>
+        <option/>
+        <default>#fb0</default>
+        <description>
+          <![CDATA[ 강조색을 설정합니다. 배경색 위에서 뚜렷하게 보일수록 좋습니다. ]]>
+        </description>
+      </variable>
+      <variable>
+        <name>sub-pt-color</name>
+        <label>
+          <![CDATA[ 강조보조색 ]]>
+        </label>
+        <type>COLOR</type>
+        <option/>
+        <default>#fea</default>
+        <description>
+          <![CDATA[ 강조보조색을 설정합니다. 강조색과 비슷하되 배경색에 가까울수록 좋습니다. ]]>
+        </description>
+      </variable>
+    </variablegroup>
+    <variablegroup name="기타 설정">
+      <variable>
+        <name>image-ct</name>
+        <label>
+          <![CDATA[ 카테고리글 이미지 썸네일 ]]>
+        </label>
+        <type>BOOL</type>
+        <option/>
+        <default>true</default>
+        <description>
+          <![CDATA[ ON-카테고리글 이미지 썸네일을 표시합니다. / OFF-표시하지 않습니다 ]]>
+        </description>
+      </variable>
+    </variablegroup>
+  </variables>
+</skin>

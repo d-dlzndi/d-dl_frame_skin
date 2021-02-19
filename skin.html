@@ -1,0 +1,740 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<link rel="alternate" type="application/rss+xml" title="[##_title_##]" href="[##_rss_url_##]" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="author" content="[##_blogger_##]">
+	<meta name="description" content="[##_title_##]">
+	<meta name="keywords" content="[##_meta_http_equiv_keywords_##]">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>[##_page_title_##] - [##_title_##]</title>
+
+	<script>
+		function preloadImages(array) {
+			if (!preloadImages.list) {
+				preloadImages.list = [];
+			}
+			var list = preloadImages.list;
+			for (var i = 0; i < array.length; i++) {
+				var img = new Image();
+				img.onload = function() {
+					var index = list.indexOf(this);
+					if (index !== -1) {
+						// remove image from the array once it's loaded
+						// for memory consumption reasons
+					list.splice(index, 1);
+					}
+				}
+				list.push(img);
+				img.src = array[i];
+			}
+		}
+		preloadImages(['[##_var_bg-img_##]', '[##_blog_image_##]']);
+	</script>
+
+	<style>
+		:root {
+			--background-color: [##_var_bg-color_##];
+			--background-img: url([##_var_bg-img_##]);
+			--main-color: [##_var_main-color_##];
+			--sub-color: [##_var_sub-color_##];
+			--point-color: [##_var_pt-color_##];
+			--sub-point-color: [##_var_sub-pt-color_##];
+			--all-width: [##_var_con-width_##]px;
+			/* ▼ 이미지가 없을 때 background 설정. 
+					css background 프로퍼티로 작성해주세요. */
+			--noimg: #000 no-repeat center center / cover fixed;
+		}
+	</style>
+	<link rel="stylesheet" href="./style.css">
+
+	<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+	<!--[if lt IE 9]>
+	<script src="//t1.daumcdn.net/tistory_admin/lib/jquery/jquery-1.12.4.min.js"></script>
+	<![endif]-->
+	<!--[if gte IE 9]><!-->
+	<script src="//t1.daumcdn.net/tistory_admin/lib/jquery/jquery-3.2.1.min.js"></script>
+	<!--<![endif]-->
+	<!--
+    <script src="//t1.daumcdn.net/tistory_admin/lib/jquery-1.11.3.min.js"></script>-->
+</head>
+
+<body>
+	<div id="topBT">
+		▲
+	</div>
+
+	<s_t3>
+		<div id="alll">
+			<div id="all">
+
+				<div id="allin">
+					<div id="all_top">
+						<header id="sidebar">
+							<aside id="side1">
+								<s_sidebar>
+									<!-- 왼쪽 사이드바 -->
+									<s_sidebar_element>
+										<!-- 블로그정보 -->
+										<div class="blogInfo">
+											<div class="blogImage" onclick="toggle();">[##_blog_image_##]</div>
+											<div class="blogDesc conBox">
+												<h1 class="titlea"><a href="[##_blog_link_##]manage">[##_title_##]</a></h1>
+												<h2 class="userID"><a href="[##_blog_link_##]">[##_blogger_##]</a></h2>
+												[##_desc_##]
+												<hr>
+												<div class="blogmenu">
+													[##_blog_menu_##]
+												</div>
+											</div>
+										</div>
+									</s_sidebar_element>
+
+									<s_sidebar_element>
+										<!-- 카테고리 -->
+										<nav class="main_cage conBox">
+											<h3>카테고리</h3>
+											[##_category_list_##]
+										</nav>
+									</s_sidebar_element>
+
+									<s_sidebar_element>
+										<!--최근에 올라온 글 -->
+										<div class="recentPost conBox newcon">
+											<h3>최근에 올라온 글 </h3>
+											<ul>
+												<s_rctps_rep>
+													<li>
+														<s_rctps_rep_thumbnail>
+															<div class="thum" style="background-image: url('//i1.daumcdn.net/thumb/S150x100/?fname=[##_rctps_rep_thumbnail_##]');">
+															</div>
+														</s_rctps_rep_thumbnail>
+														<div class="ect">
+															<a href="[##_rctps_rep_link_##]">
+																[##_rctps_rep_title_##]
+															</a>
+															<span class="cnt">[##_rctps_rep_rp_cnt_##]</span><br />
+															<a href="[##_rctps_rep_category_link_##]">[##_rctps_rep_category_##]</a></div>
+													</li>
+												</s_rctps_rep>
+											</ul>
+										</div>
+									</s_sidebar_element>
+
+									<s_sidebar_element>
+										<!-- 최근에 달린 댓글 -->
+										<div class="recentComment conBox searchList">
+											<h3>최근에 달린 댓글</h3>
+											<ul id="recentComments">
+												<s_rctrp_rep>
+													<li>
+														<a href="[##_rctrp_rep_link_##]">[##_rctrp_rep_desc_##]</a>
+														<span class="info_wrap">
+															<!--<span class="name">[##_rctrp_rep_name_##]</span>-->
+															<span class="date">[##_rctrp_rep_time_##]</span>
+														</span>
+													</li>
+												</s_rctrp_rep>
+											</ul>
+										</div>
+									</s_sidebar_element>
+
+									<s_sidebar_element>
+										<!-- 공지사항 -->
+										<s_rct_notice>
+											<div class="conBox searchList notice">
+												<h3>공지사항</h3>
+												<ol>
+													<s_rct_notice_rep>
+														<li>
+															<a href="[##_notice_rep_link_##]">[##_notice_rep_title_##]</a>
+														</li>
+													</s_rct_notice_rep>
+												</ol>
+											</div>
+										</s_rct_notice>
+									</s_sidebar_element>
+								</s_sidebar>
+							</aside>
+
+							<aside id=side2>
+								<s_sidebar>
+									<!--오른쪽 사이드바-->
+									<s_sidebar_element>
+										<!-- 이 블로그 인기글 -->
+										<div class="popularPost conBox newcon">
+											<h3>이 블로그 인기글</h3>
+											<ul>
+												<s_rctps_popular_rep>
+													<li>
+														<s_rctps_rep_thumbnail>
+															<div class="thum" style="background-image: url('//i1.daumcdn.net/thumb/S150x100/?fname=[##_rctps_rep_thumbnail_##]');">
+															</div>
+														</s_rctps_rep_thumbnail>
+														<div class="ect">
+															<a href="[##_rctps_rep_link_##]">
+																[##_rctps_rep_title_##]
+																<!--<span class="cnt">[##_rctps_rep_rp_cnt_##]</span>-->
+															</a>
+															<br />
+															<a href="[##_rctps_rep_category_link_##]">[##_rctps_rep_category_##]</a></div>
+													</li>
+												</s_rctps_popular_rep>
+											</ul>
+										</div>
+									</s_sidebar_element>
+
+									<s_sidebar_element>
+										<!-- 태그 클라우드 -->
+										<div class="tagbox conBox">
+											<h3>태그 목록</h3>
+											<ul>
+												<s_random_tags>
+													<li>
+														<a href="[##_tag_link_##]" class="[##_tag_class_##]"> [##_tag_name_##]</a>
+													</li>
+												</s_random_tags>
+											</ul>
+										</div>
+									</s_sidebar_element>
+
+									<s_sidebar_element>
+										<!-- 방문자수 -->
+										<div class="counter conBox">
+											<span class="yesterday">어제 [##_count_yesterday_##] …</span>
+											<span class="today">오늘 [##_count_today_##]</span>
+											<span class="total">… 총 [##_count_total_##]</span>
+										</div>
+									</s_sidebar_element>
+
+									<s_sidebar_element>
+										<!-- 검색 -->
+										<div class="search">
+											<s_search>
+												<input type="text" name="[##_search_name_##]" value="[##_search_text_##]" onkeypress="if (event.keyCode == 13) { [##_search_onclick_submit_##] }" />
+												<input value="검색" type="button" onclick="[##_search_onclick_submit_##]" class="submit" />
+											</s_search>
+										</div>
+									</s_sidebar_element>
+								</s_sidebar>
+							</aside>
+							<script>
+								if ([##_var_side-f_##] === 2) {
+									document.write('<style>#side1, #side2 {max-width:49%}</style>');
+								} else if ([##_var_side-f_##] === 1) {
+									document.write('<style>#sidebar {flex-wrap: wrap; flex-direction: column;} </style>');
+								} else if ([##_var_side-f_##] === 0) {
+									document.write('<style> #sidebar, #side1, #side2 { display: none !important; } </style>');
+								}
+							</script>
+
+						</header>
+					</div>
+					
+<!--커버 부분 시작-->
+			<s_cover_group>
+					<s_cover_rep>
+						<s_cover name='cover-slider'>
+							<div class='cover-slider'>
+								<ul>
+									<s_cover_item>
+										<li style="background-image: url(<s_cover_item_thumbnail>//i1.daumcdn.net/thumb/R700x0/?fname=[##_cover_item_thumbnail_##]</s_cover_item_thumbnail>)">
+											
+											<a href="[##_cover_item_url_##]" class="ctext-box">
+												<span class="title">
+													<s_cover_item_article_info>
+															<em>[##_cover_item_category_##]</em>
+														<br />
+													</s_cover_item_article_info>
+													[##_cover_item_title_##]
+												</span>
+												<span class="btn view">더보기</span>
+											</a>
+											<s_cover_item_article_info>
+												<span class="csum">[##_cover_item_summary_##]</span>
+											</s_cover_item_article_info>
+										</li>
+									</s_cover_item>
+									<div class="cnext" onclick="cs_next(this)">▶</div>
+								</ul>
+							</div>
+						</s_cover>
+
+						<s_cover name='cover-thumbnail-list-1'>
+							<div class="cover-thumbnail-list-1 conBox">
+								<h2>[##_cover_title_##]</h2>
+								<div class="br"></div>
+								<ul>
+									<s_cover_item>
+										<li>
+											<a href="[##_cover_item_url_##]">
+												<div class="thum"><s_cover_item_thumbnail><img src="//i1.daumcdn.net/thumb/C264x200/?fname=[##_cover_item_thumbnail_##]" alt=""></s_cover_item_thumbnail>
+												<span class="title">[##_cover_item_title_##]
+													</span>
+													<s_cover_item_article_info>
+														<em>[##_cover_item_date_##]</em>
+														</s_cover_item_article_info>
+												</div>
+											</a>
+										</li>
+									</s_cover_item>
+								</ul>
+							</div>
+						</s_cover>
+
+						<s_cover name='cover-special-contents'>
+							<div class="cover-special-contents conBox">
+								<ul>
+									<s_cover_item>
+										<li>
+											<a href="[##_cover_item_url_##]">
+											<span class="thum"><s_cover_item_thumbnail><img src="//i1.daumcdn.net/thumb/C600x600/?fname=[##_cover_item_thumbnail_##]" alt=""></s_cover_item_thumbnail></span>
+											</a>
+											<span class="cbox">
+												<s_cover_item_article_info>
+													<span class="category">
+														<a href="[##_cover_item_category_url_##]">[##_cover_item_category_##]</a></span>
+												</s_cover_item_article_info>
+												<div class="br"></div>
+												<span class="title">[##_cover_item_title_##]</span>
+												<span class="excerpt">[##_cover_item_summary_##]</span>
+												<a href="[##_cover_item_url_##]" class="btn view">더보기</a>
+											</span>
+										</li>
+									</s_cover_item>
+								</ul>
+							</div>
+						</s_cover>
+
+						<s_cover name='cover-wide-panel'>
+							<s_cover_item>
+								<div class="cover-wide-panel conBox">
+									<div class="bg" style="background-image:url(<s_cover_item_thumbnail>[##_cover_item_thumbnail_##]</s_cover_item_thumbnail>);">
+										
+									<div class="cbox">
+										<s_cover_item_article_info>
+											<span class="category">[##_cover_item_category_##]</span>
+										</s_cover_item_article_info>
+										<h2>[##_cover_item_title_##]</h2>
+										<p>[##_cover_item_summary_##]</p>
+										<a href="[##_cover_item_url_##]" class="btn view">더보기</a>
+									</div>
+									
+									</div>
+								</div>
+							</s_cover_item>
+						</s_cover>
+
+						<s_cover name='cover-thumbnail-list-2'>
+							<div class="cover-thumbnail-list-2 conBox">
+								<h2>[##_cover_title_##]</h2>
+								<ul>
+									<s_cover_item>
+										<li>
+											<a href="[##_cover_item_url_##]">
+												<span class="thum"><s_cover_item_thumbnail><img src="//i1.daumcdn.net/thumb/C276x260/?fname=[##_cover_item_thumbnail_##]" alt=""></s_cover_item_thumbnail></span>
+												<span class="title">[##_cover_item_title_##]</span>
+												<span class="excerpt">[##_cover_item_summary_##]</span>
+												<span class="more">더보기</span>
+											</a>
+										</li>
+									</s_cover_item>
+								</ul>
+							</div>
+						</s_cover>
+
+					</s_cover_rep>
+				</s_cover_group>
+<!--커버 부분 종료-->
+
+					<s_list>
+						<div class="conBox searchList">
+							<h3>[##_list_conform_##] - 글 [##_list_count_##]건</h3>
+							<ol>
+								<s_list_rep>
+									<li>
+										<a href="[##_list_rep_link_##]">[##_list_rep_title_##] <span class="cnt">[##_list_rep_rp_cnt_##]</span></a>
+										<span class="date">[##_list_rep_regdate_##]</span>
+									</li>
+								</s_list_rep>
+							</ol>
+						</div>
+					</s_list>
+
+<!--
+					<s_index_article_rep>
+						<div class="list_content">
+							<s_article_rep_thumbnail>
+								<img src="[##_article_rep_thumbnail_url_##]">
+							</s_article_rep_thumbnail>
+
+							<a href="[##_article_rep_link_##]" class="link_post">
+								<strong class="tit_post">[##_article_rep_title_##]</strong>
+								<p class="txt_post">[##_article_rep_summary_##]</p>
+							</a>
+
+							<div class="detail_info">
+								<a href="[##_article_rep_category_link_##]" class="link_cate">
+									[##_article_rep_category_##]
+								</a>
+								[##_article_rep_date_##]
+							</div>
+						</div>
+					</s_index_article_rep>
+-->
+
+					<s_local>
+						<div class="localog conBox">
+							<h3>위치로그</h3>
+							<s_local_spot_rep>
+								<div class="spot" style="margin-left: [##_local_spot_depth_##]px">
+									[##_local_spot_##]
+								</div>
+							</s_local_spot_rep>
+							<s_local_info_rep>
+								<div class="info" style="margin-left: [##_local_info_depth_##]px">
+									<a href="[##_local_info_link_##]">[##_local_info_title_##]</a>
+								</div>
+							</s_local_info_rep>
+						</div>
+					</s_local>
+
+					<s_tag>
+						<div class="tagcon taglog conBox">
+							<h3>태그</h3>
+							<s_tag_rep>
+								<a href="[##_tag_link_##]" class="[##_tag_class_##]">[##_tag_name_##]</a>
+							</s_tag_rep>
+						</div>
+					</s_tag>
+
+					<s_guest>
+						<div class="conBox guestw">
+							<h3>방명록</h3>
+							<s_guest_input_form>
+								<div class="guestWrite">
+									<s_guest_member>
+										<s_guest_form>
+											<p>
+												<input type="text" name="[##_guest_input_name_##]" value="[##_guest_name_##]" placeholder="NAME" />
+											</p>
+											<p>
+												<input type="password" maxlength="8" name="[##_guest_input_password_##]" value="[##_guest_password_##]" placeholder="PASSWORD" />
+											</p>
+											<p>
+												<input type="text" name="[##_guest_input_homepage_##]" value="[##_guest_homepage_##]" placeholder="HOMEPAGE" />
+											</p>
+										</s_guest_form>
+									</s_guest_member>
+									<p>
+										<textarea name="[##_guest_textarea_body_##]" cols="50" rows="6"></textarea>
+									</p>
+									<p>
+										<input type="submit" value="안부 남기기" onclick="[##_guest_onclick_submit_##]" />
+									</p>
+								</div>
+							</s_guest_input_form>
+
+							<s_guest_container>
+								<div class="guestList">
+									<ol>
+										<s_guest_rep>
+											<li id='[##_guest_rep_id_##]'>
+												<div class="[##_guest_rep_class_##]">
+													<span class="name">[##_guest_rep_name_##]</span>
+													<span class="date"> [##_guest_rep_date_##]</span>
+													<span class="control">
+														<a href="#" onclick="[##_guest_rep_onclick_delete_##]">M/D</a>
+														<a href="#" onclick="[##_guest_rep_onclick_reply_##]">R</a>
+													</span>
+													<p>[##_guest_rep_desc_##]</p>
+												</div>
+												<s_guest_reply_container>
+													<ul>
+														<s_guest_reply_rep>
+															<li id='[##_guest_rep_id_##]'>
+																<div class="[##_guest_rep_class_##]">
+																	<span class="name">[##_guest_rep_name_##]</span>
+																	<span class="date"> [##_guest_rep_date_##]</span>
+																	<span class="control">
+																		<a href="#" onclick="[##_guest_rep_onclick_delete_##]">
+																			M/D</a>
+																	</span>
+																	<p>[##_guest_rep_desc_##]</p>
+																</div>
+															</li>
+														</s_guest_reply_rep>
+													</ul>
+												</s_guest_reply_container>
+											</li>
+										</s_guest_rep>
+									</ol>
+								</div>
+							</s_guest_container>
+						</div>
+					</s_guest>
+
+
+					<s_article_protected>
+						<article class="conBox Protected">
+
+							<div class="conTitle">
+								<span class="conCT"><a href="[##_article_rep_category_link_##]">[##_article_rep_category_##]</a></span>
+								<div class="br"></div>
+								<h2><a href="[##_article_rep_link_##]">[##_article_rep_title_##]</a></h2>
+								<div class="conAU">[##_article_rep_author_##] [##_article_rep_date_##]</div>
+							</div>
+							<p>이 글은 보호되어 있습니다.</p>
+							<p><label for="[##_article_password_##]"></label>
+								<input type="password" maxlength="16" id="[##_article_password_##]" name="[##_article_password_##]" value="" onkeydown="if (event.keyCode == 13)[##_article_dissolve_##]" placeholder="PASSWORD" />
+								<input type="button" class="submit" value="submit" onclick="[##_article_dissolve_##]" />
+							</p>
+						</article>
+					</s_article_protected>
+
+
+					<s_notice_rep>
+						<article class="conBox entry">
+							<div class="conTitle">
+								<span class="conCT"><a href="[##_blog_link_##]/notice">공지사항</a></span>
+								<div class="br"></div>
+								<h1 class="conTI"><a href="[##_notice_rep_link_##]">[##_notice_rep_title_##]</a></h1>
+								<div class="conAU">
+									[##_notice_rep_author_##] [##_notice_rep_date_##]
+								</div>
+							</div>
+							<div class="content">
+								[##_notice_rep_desc_##]
+							</div>
+						</article>
+						<!--conbox End-->
+					</s_notice_rep>
+
+					<div>
+						<s_article_rep>
+							<article class="cont1">
+								<div class="conBox entry">
+									<div class="conTitle">
+										<span class="conCT"><a href="[##_article_rep_category_link_##]">[##_article_rep_category_##]</a></span>
+
+										<div class="br"></div>
+
+										<h1 class="conTI"><a href="[##_article_rep_link_##]">[##_article_rep_title_##]</a></h1>
+
+										<div class="conAU">[##_article_rep_summary_##]
+											[##_article_rep_date_##]
+
+											<s_ad_div>
+												<span class="my_edit">
+													<span class="txt_bar"></span><a href="[##_s_ad_m_link_##]" onclick="[##_s_ad_m_onclick_##]">수정</a>
+													<span class="txt_bar"></span><a href="#" onclick="[##_s_ad_s2_onclick_##]">[##_s_ad_s1_label_##]→[##_s_ad_s2_label_##]</a>
+													<span class="txt_bar"></span><a href="#" onclick="[##_s_ad_t_onclick_##]">관련글(트랙백)</a>
+													<span class="txt_bar"></span><a href="#" onclick="[##_s_ad_d_onclick_##]">삭제</a>
+												</span>
+											</s_ad_div>
+										</div>
+
+									</div>
+
+									<div class="content">
+										[##_article_rep_desc_##]
+									</div>
+								</div>
+								<!--conbox End-->
+								<s_tag_label>
+									<div class="conBox tag">
+										<dd class="tagcon">
+											[##_tag_label_rep_##]
+										</dd>
+									</div>
+								</s_tag_label>
+								<!--tag end-->
+
+								<s_if_var_image-ct>
+									<s_article_related_rep>
+										<s_article_related>
+											<div class="prevnext">
+												<s_paging>
+													<div class="prev"><a id="rep_prev" href="[##_prev_page_##]">◀</a></div>
+												</s_paging>
+												<s_article_related_rep>
+													<a href="[##_article_related_rep_link_##]">
+														<div class="box [##_article_related_rep_type_##]" box_title="" <s_article_related_rep_thumbnail>
+															style="background-image: url([##_article_related_rep_thumbnail_link_##]);"
+															</s_article_related_rep_thumbnail>
+															>
+															▼<br />
+															[##_article_related_rep_date_##]
+														</div>
+													</a>
+												</s_article_related_rep>
+
+												<div class="next"><a id="rep_next" href="[##_next_page_##]">▶</a></div>
+											</div>
+										</s_article_related>
+									</s_article_related_rep>
+								</s_if_var_image-ct>
+
+
+								<div class="conBox comment">
+<!--
+<a href="#tb" onclick="[##_article_rep_tb_link_##]">
+<s_tb_count>
+트랙백 <span class="cnt">[##_article_rep_tb_cnt_##]</span>개
+</s_tb_count>
+</a>
+, -->
+									<a href="#rp" onclick="[##_article_rep_rp_link_##]">
+										댓글 <span class="cnt">
+											<s_rp_count>[##_article_rep_rp_cnt_##]</s_rp_count>
+										</span>개가 달렸습니다.
+									</a>
+
+
+
+									<s_rp>
+										<!--<button type="button" class="btn_replymore">이전 댓글 보기</button>-->
+										<div id="[##_rp_rep_id_##]" class="commentList">
+											<s_rp_container>
+												<ol>
+													<s_rp_rep>
+														<li id='[##_rp_rep_id_##]'>
+															<div class="[##_rp_rep_class_##]">
+																<span class="image"><img src="[##_rp_rep_logo_##]" alt="프로필사진"></span>
+																<div class="con">
+																	<span class="name">[##_rp_rep_name_##]</span>
+																	<span class="date"> [##_rp_rep_date_##]</span>
+																	<span class="control">
+																		<a href="[##_rp_rep_link_##]" class="address">&nbsp;<span>#</span></a>
+																		<a href="#" onclick="[##_rp_rep_onclick_delete_##]" class="modify">&nbsp;<span>E/D</span></a>
+																		<a href="#" onclick="[##_rp_rep_onclick_reply_##]" class="write">&nbsp;<span>R</span></a>
+																	</span>
+																	<p>[##_rp_rep_desc_##]</p>
+																</div>
+															</div>
+															<s_rp2_container>
+																<ul>
+																	<s_rp2_rep>
+																		<li id='[##_rp_rep_id_##]'>
+																			<div class="[##_rp_rep_class_##]">
+																				<span class="image"><img src="[##_rp_rep_logo_##]" alt="프로필사진"></span>
+																				<div class="con">
+																					<span class="name">[##_rp_rep_name_##]</span>
+																					<span class="date"> [##_rp_rep_date_##]</span>
+																					<span class="control">
+																						<a href="[##_rp_rep_link_##]" class="address">&nbsp;<span>#</span> </a>
+																						<a href="#" onclick="[##_rp_rep_onclick_delete_##]" class="modify">&nbsp;<span>E/D</span></a>
+																					</span>
+																					<p>[##_rp_rep_desc_##]</p>
+																				</div>
+																			</div>
+																		</li>
+																	</s_rp2_rep>
+																</ul>
+															</s_rp2_container>
+														</li>
+													</s_rp_rep>
+												</ol>
+											</s_rp_container>
+										</div>
+
+
+										<s_rp_input_form>
+											<div class="commentWrite">
+												<s_rp_member>
+													<p class="secretWrap">
+														<input type="checkbox" name="[##_rp_input_is_secret_##]" class="checkbox secretbt" id="secret" />
+														<label for="secret" class="secretbt">SECRET</label>
+													</p>
+													<s_rp_guest>
+														<p>
+															<input type="text" name="[##_rp_input_name_##]" value="[##_guest_name_##]" placeholder="NAME" />
+														</p>
+														<p>
+															<input type="password" maxlength="8" name="[##_rp_input_password_##]" value="[##_rp_admin_check_##]" placeholder="PASSWORD" />
+														</p>
+														<p>
+															<input type="text" class="homepage" name="[##_rp_input_homepage_##]" value="[##_guest_homepage_##]" placeholder="HOMEPAGE" />
+														</p>
+													</s_rp_guest>
+												</s_rp_member>
+												<p>
+													<textarea name="[##_rp_input_comment_##]" rows="10" cols="50" placeholder="댓글 내용을 입력해주세요"></textarea>
+												</p>
+												<p>
+													<input type="submit" value="댓글 달기" onclick="[##_rp_onclick_submit_##]" />
+												</p>
+											</div>
+										</s_rp_input_form>
+									</s_rp>
+									<!--</s_permalink_article_rep>-->
+								</div>
+								<!--conBox end -->
+							</article>
+							<!--글하나 종료-->
+						</s_article_rep>
+					</div>
+
+					<s_paging>
+						<div class="paging">
+							<a [##_prev_page_##] class="[##_no_more_prev_##]" id="page_prev">◀</a>
+							<span class="numbox">
+								<s_paging_rep>
+									<a [##_paging_rep_link_##] class="num">[##_paging_rep_link_num_##]</a>
+								</s_paging_rep>
+							</span>
+							<a [##_next_page_##] class="[##_no_more_next_##]" id="page_next">▶</a>
+						</div>
+					</s_paging>
+
+
+					<footer id="copyright">
+						<!--수정 금지-->
+						Designed by <a href="https://d-dl.tistory.com/" target="_blank">ㅓㅇ</a>
+					</footer>
+				</div>
+				<!--allin end -->
+			</div><!-- alll end -->
+		</div>
+	</s_t3>
+
+	<script src="./images/script.js"></script>
+		<script>
+			  var bg_trans = 1;
+			</script>
+				<s_if_var_bg-trans>
+					<script> bg_trans = 0; </script>
+				</s_if_var_bg-trans>
+
+<s_if_var_sideshut>
+<script>
+	  $("#side1").children().not(".blogInfo").not(".search").slideToggle(1);
+	  $("#side2").children().not(".blogInfo").not(".search").slideToggle(1);
+	</script>
+</s_if_var_sideshut>
+
+		<script>
+  var enter = [##_var_bg-enter_##];
+	var leave = [##_var_bg-leave_##];
+
+  $("#allin").mouseenter(function(){
+    if (bg_trans == 1) $("#all").stop().animate({opacity : 1}, enter);
+    else $("#allin > *").stop().animate({opacity : 1}, enter);
+  });
+  $("#allin").mouseleave(function(){
+    if (bg_trans == 1) $("#all").stop().animate({opacity : 0.5}, leave);
+    else $("#allin > *").stop().animate({opacity : 0.5}, leave);
+  });
+	var agent = navigator.userAgent.toLowerCase();
+			
+	$('.cover-slider li').click(function(e) { 
+		if(!$(e.target).hasClass("ctext-box") || !$(e.target).hasClass("title")  || !$(e.target).hasClass("btn") ) cs_next(this); 
+	});
+			
+		    allLoad();
+		</script>
+
+</body>
+</html>
