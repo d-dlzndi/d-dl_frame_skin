@@ -1745,7 +1745,7 @@ div[data-ke-type="moreLess"]>a.btn-toggle-moreless:hover::before, div[data-ke-ty
     width: 100%;
   }
 
-  body, #alll, #all, #allin {
+  body /*, #alll, #all, #allin */ {
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
   }
